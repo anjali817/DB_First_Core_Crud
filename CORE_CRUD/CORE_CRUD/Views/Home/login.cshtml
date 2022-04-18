@@ -1,0 +1,23 @@
+﻿@model CORE_CRUD.Models.EMPModel
+<h1 class="text-success">LOGIN HERE</h1>
+
+<form method="post" asp-action="login" asp-controller="Home">
+    <div class="form-group">
+        <label asp-for="Email" class="control-label"></label>
+        <input asp-for="Email" class="form-control" required="required" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <h4 class="text-danger">@TempData["Invalid"]</h4>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Password" class="control-label"></label>
+        <input asp-for="Password" type="password" class="form-control" required="required" />
+        <span asp-validation-for="Password" class="text-danger"></span>
+        <h4 class="text-danger">@ViewBag.Inv</h4>
+    </div>
+
+
+    <div class="form-group">
+        <input type="submit" value="Login" class="btn btn-primary" />
+    </div>
+</form>
